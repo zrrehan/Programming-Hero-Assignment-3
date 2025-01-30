@@ -13,11 +13,66 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- tailwind customization  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        btn_bg: '#FFDC26',
+                        nav_bg: "#FFF9F4"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- font CDN  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style = "font-family: Sora;" class = "font-medium">
     <!-- heading section  -->
     <header>
+        <!-- navbar  -->
+        <div class="navbar bg-base-100 justify-between bg-nav_bg border lg:border-none">
+            <div class="">
+                <a class="flex items-center gap-3">
+                    <img src="assets/logo-header.png" alt="">
+                    <p class = "text-2xl hidden lg:flex">Browse<span class = "text-btn_bg">4</span>Pets</p>
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a class = "text-xl">Find a pet</a></li>
+                    <li><a class = "text-xl">Breeds</a></li>
+                    <li><a class = "text-xl">Contact us</a></li>
+                </ul>
+            </div>
+            <div class=" space-x-5 hidden lg:flex">
+                <i class="fa-regular fa-bell text-2xl"></i>
+                <i class="fa-solid fa-magnifying-glass text-2xl"></i>
+                <a class="btn btn-outline border-btn_bg hover:bg-btn_bg hover:border-btn_bg h-11 w-36 px-0 text-xl">Login</a>
+                <a class="btn bg-btn_bg border-btn_bg hover:bg-[#F9DF8A] h-11 w-36 px-0 text-xl">Register</a>
+            </div>
 
+            <div class="dropdown dropdown-bottom dropdown-end lg:hidden">
+                <div tabindex="0" role="button" class="m-1 ">
+                    <i class="fa-solid fa-bars text-3xl"></i>
+                </div>
+                <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                    <li><a class="text-xl">Find a pet</a></li>
+                    <li><a class="text-xl">Breeds</a></li>
+                    <li><a class="text-xl">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <!-- main section  -->
