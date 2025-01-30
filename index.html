@@ -21,6 +21,7 @@
                 extend: {
                     colors: {
                         btn_bg: '#FFDC26',
+                        hover_btn_bg: "#CDB32A",
                         nav_bg: "#FFF9F4"
                     }
                 }
@@ -36,10 +37,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+
+    <style>
+        .ADLaM {
+            font-family: "ADLaM Display";
+        }
+    </style>
 </head>
 <body style = "font-family: Sora;" class = "font-medium">
     <!-- heading section  -->
-    <header>
+    <header class = "space-y-8 lg:space-y-20">
         <!-- navbar  -->
         <div class="navbar bg-base-100 justify-between bg-nav_bg border lg:border-none">
             <div class="">
@@ -59,7 +66,7 @@
                 <i class="fa-regular fa-bell text-2xl"></i>
                 <i class="fa-solid fa-magnifying-glass text-2xl"></i>
                 <a class="btn btn-outline border-btn_bg hover:bg-btn_bg hover:border-btn_bg h-11 w-36 px-0 text-xl">Login</a>
-                <a class="btn bg-btn_bg border-btn_bg hover:bg-[#F9DF8A] h-11 w-36 px-0 text-xl">Register</a>
+                <a class="btn bg-btn_bg border-btn_bg hover:bg-hover_btn_bg h-11 w-36 px-0 text-xl">Register</a>
             </div>
 
             <div class="dropdown dropdown-bottom dropdown-end lg:hidden">
@@ -72,6 +79,18 @@
                     <li><a class="text-xl">Contact us</a></li>
                 </ul>
             </div>
+        </div>
+
+
+        <!-- hero section  -->
+        <div class = "w-[95vw] md:w-10/12 mx-auto space-y-6 h-[392px] lg:h-[749px] bg-[url('assets/cat-big.png')] bg-contain bg-no-repeat bg-right-bottom">
+            <h1 class = "ADLaM text-3xl lg:text-6xl">Pamper Your Pet,<br> Because They Deserve<br> the Best</h1>
+            <p class = "lg:w-1/2 text-[#777777]">
+                Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!
+            </p>
+            <button class="btn bg-btn_bg border-btn_bg hover:bg-hover_btn_bg">
+                Find a pet
+            </button>
         </div>
     </header>
 
