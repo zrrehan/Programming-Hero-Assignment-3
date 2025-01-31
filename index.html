@@ -95,7 +95,7 @@
     </header>
 
     <!-- main section  -->
-    <main class = "w-[95vw] md:w-10/12 mx-auto py-36 space-y-14 lg:space-y-64 lg:max-w-[1320px]">
+    <main class = "w-[95vw] md:w-10/12 mx-auto py-36 space-y-14 lg:space-y-64 lg:max-w-[1320px] relative">
         <!-- categories section  -->
         <div class = "space-y-8 lg:space-y-12 ">
             <h1 class = "ADLaM text-2xl lg:text-5xl">Browse By Categories</h1>
@@ -324,10 +324,53 @@
                 </div>
             </div>
         </div>
+
+        <!-- news section  -->
+        <!-- bg-[#FFF9F4] -->
+        <div class = "bg-[#FFF9F4] rounded-2xl flex flex-col items-center gap-8 py-8 lg:flex-row lg:justify-around absolute w-full -bottom-[480px]">
+            <div class = "h-[238px] w-[190px] lg:w-[330px] lg:h-[415px]">
+                <img class = "w-[100%]" src="assets/cute-pet-mid.png">
+            </div>
+
+            <div class = "text-center lg:text-left space-y-3">
+                <h1 class = "ADLaM text-[22px] lg:text-4xl">Get Pawsome News!</h1>
+                <p class = "font-light lg:text-xl">Exlusive training tips, tricks, product deals and more.</p>
+                <input type="email" class = "h-[42px] w-[312px] font-light lg:h-[67px] lg:w-[472px] rounded-lg px-4" placeholder="Enter email....">
+                <br class = "hidden lg:block">
+                <button class="btn bg-btn_bg border-btn_bg hover:bg-hover_btn_bg h-11 w-[164px] px-0 text-xl font-normal">Subscribe</button>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        
+    <footer class = "bg-[rgba(255,221,38,0.5)] space-y-9 px-4 pb-14 pt-[365px] lg:flex lg:space-y-0 lg:justify-around lg:items-end mt-48">
+            <div>
+                <div class="space-y-4 lg:w-[20vw]">
+                    <div class = "flex justify-start items-center gap-2">
+                        <img class="h-9 w-9 lg:h-12 lg:w-12" src="assets/logo-footer.png">
+                        <p class="text-2xl">Browse<span class="text-btn_bg">4</span>Pets</p>
+                    </div>
+                    <p class = "text-[rgba(17,17,17,0.7)] lg:text-xl">
+                        Discover a world of treats, toys, and essentials handpicked for your furry friends
+                    </p>
+                </div>
+            </div>
+            
+
+            <div class = "flex flex-col gap-5">
+                <a href="#" class = "lg:text-2xl">Find a pet</a>
+                <a href="#" class = "lg:text-2xl">Breeds</a>
+                <a href="#" class = "lg:text-2xl">Contact us</a>
+            </div>
+
+            <div class = "space-y-3">
+                <p class = "text-sm lg:text-2xl">Follow Us</p>
+                <div class = "space-x-5">
+                    <i class="fa-brands fa-facebook h-6 w-6 lg:text-2xl"></i>
+                    <i class="fa-brands fa-instagram h-6 w-6 lg:text-2xl"></i>
+                    <i class="fa-brands fa-linkedin-in h-6 w-6 lg:text-2xl"></i>
+                    <i class="fa-brands fa-youtube h-6 w-6 lg:text-2xl"></i>
+                </div>
+            </div>
     </footer>
 </body>
 </html>
