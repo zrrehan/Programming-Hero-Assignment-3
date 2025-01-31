@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo-header.png">
 
     <!-- Daisy UI CDN  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -42,13 +43,47 @@
         .ADLaM {
             font-family: "ADLaM Display";
         }
+
+        @keyframes appear_view {
+            from {
+                opacity: 0.5;
+                scale:0.5
+            }
+
+            to {
+                opacity: 100;
+                scale: 1
+            }
+        }
+
+        .animated_block {
+            animation: appear_view linear;
+            animation-timeline: view();
+            animation-range: entry 0;
+        }
+
+        @keyframes header_animation {
+            from {
+                opacity: 0.1;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animated_start {
+            animation-name: header_animation;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+        }
     </style>
 </head>
 <body style = "font-family: Sora;" class = "font-medium">
     <!-- heading section  -->
     <header class = "space-y-8 lg:space-y-20 ">
         <!-- navbar  -->
-        <div class="navbar bg-base-100 justify-between bg-nav_bg border xl:border-none">
+        <div class="navbar bg-base-100 justify-between bg-nav_bg border xl:border-none px-11">
             <div class="">
                 <a class="flex items-center gap-3">
                     <img src="assets/logo-header.png" alt="">
@@ -83,21 +118,22 @@
 
 
         <!-- hero section  -->
-        <div class = "w-[95vw] md:w-10/12 mx-auto space-y-6 h-[392px] lg:h-[749px] bg-[url('assets/cat-big.png')] bg-contain bg-no-repeat bg-right-bottom lg:max-w-[1320px]">
-            <h1 class = "ADLaM text-3xl lg:text-6xl">Pamper Your Pet,<br> Because They Deserve<br> the Best</h1>
+        <div class = "w-[95vw] animated_start md:w-10/12 mx-auto space-y-6 h-[392px] lg:h-[749px] bg-[url('assets/cat-big.png')] bg-contain bg-no-repeat bg-right-bottom lg:max-w-[1320px]">
+            <h1 class = "ADLaM text-3xl lg:text-6xl transition-colors ease-in-out">Pamper Your Pet,<br> Because They Deserve<br> the Best</h1>
             <p class = "lg:w-1/2 text-[#777777]">
                 Discover a world of treats, toys, and essentials handpicked for your furry friends. Shop now and make tails wag with joy!
-            </p>
+            </p> 
             <button class="btn bg-btn_bg border-btn_bg hover:bg-hover_btn_bg h-11 w-36 px-0 text-xl">
                 Find a pet
             </button>
+            <!-- <img class="animate-ping" src="assets/logo-header.png" alt=""> -->
         </div>
     </header>
 
     <!-- main section  -->
     <main class = "py-36 space-y-14 lg:space-y-64 relative">
         <!-- categories section  -->
-        <div class = "space-y-8 lg:space-y-12 w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px]">
+        <div class = "space-y-8 lg:space-y-12 w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px] animated_block">
             <h1 class = "ADLaM text-2xl lg:text-5xl">Browse By Categories</h1>
             <!-- card container  -->
             <div class = "grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 justify-between gap-3">
@@ -165,7 +201,7 @@
 
         <!-- tending pet section  -->
         <div class = "bg-[#FFF9F4] py-36">
-            <div class="space-y-8 lg:space-y-12 w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px]">
+            <div class="space-y-8 lg:space-y-12 w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px] animated_block">
                 <h1 class="ADLaM text-2xl lg:text-5xl">Trending Pet Products</h1>
                 <div class="space-y-5 sm:space-y-0 flex flex-col items-center sm:flex-row sm:items-start sm:justify-between">
                     <!-- big card  -->
@@ -306,7 +342,7 @@
         
 
         <!-- everyday low price section  -->
-        <div class = "space-y-8 lg:space-y-12 w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px]">
+        <div class = "space-y-8 lg:space-y-12 w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px] animated_block">
             <h1 class = "ADLaM text-2xl lg:text-5xl">Everyday low price</h1>
 
             <!-- card container  -->
@@ -332,7 +368,7 @@
         </div>
 
         <!-- frequent Asked Question -->
-        <div class = "w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px] space-y-8">
+        <div class = "w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px] space-y-8 animated_block">
             <h1 class = "ADLaM text-2xl lg:text-5xl">Frequently Asked Questions</h1>
             <div class = "space-y-7 lg:grid lg:grid-cols-2">
                 <div>
@@ -376,7 +412,7 @@
         </div>
 
         <!-- news section  -->
-        <div class = "relative w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px]">
+        <div class = "relative w-[95vw] md:w-10/12 mx-auto lg:max-w-[1320px] animated_block">
             <div
                 class="bg-[#FFF9F4] rounded-2xl flex flex-col items-center gap-8 py-8 lg:flex-row lg:justify-around absolute -bottom-[630px] lg:-bottom-[560px] w-full"> 
                 <div class="h-[238px] w-[190px] lg:w-[330px] lg:h-[415px]">
